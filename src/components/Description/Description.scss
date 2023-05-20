@@ -1,0 +1,53 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
+.description{
+    padding: 0 1rem;
+
+    &__title{
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-align: left;
+        padding: 1rem 0;
+        border-bottom: solid $mercury 1px;
+        line-height: 2rem;
+    }
+    &__details{
+        padding: 1.25rem 0;
+        display: flex;
+        border-bottom: solid $mercury 1px;
+    }
+    &__container{
+        height: 3.5rem;
+        width:50%;
+        text-align: left;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    &__info{
+        display:flex;
+        align-items: center;
+    }
+    &__info-text{
+        color: $silver;
+        &--bold{
+            color: black;
+                font-weight:600;
+        }
+    }
+    &__icon{
+        padding: 0 0.5rem;
+        height: 1.1rem;
+    }
+
+    &__video{
+        padding: 1.5rem 0;
+        text-align: left;
+        font-size: 0.82rem;
+        line-height: 1.2rem;
+    }
+}

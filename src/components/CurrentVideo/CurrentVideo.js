@@ -1,7 +1,12 @@
+import './CurrentVideo.scss';
+import playIcon from '../../assets/images/icons/play.svg'
+
 const CurrentVideo = ({currVideo}) => {
     return (
-        <div class="display">
-             <video poster={currVideo.image}></video> 
+        <div className="display">
+            <video controls poster={currVideo.image} className="display__image">
+            <source/> 
+            </video>
         </div>
        
     )

@@ -1,8 +1,9 @@
 import './App.scss';
+import { useState } from 'react';
+import VideoDetails from './data/video-details.json' // A list of video objects
 import Header from './components/Header/Header.js'
 import CurrentVideo from './components/CurrentVideo/CurrentVideo.js'
-import VideoDetails from './data/video-details.json' // A list of video objects
-import { useState } from 'react';
+import Description from './components/Description/Description.js'
 import VideoList from './components/VideoList/VideoList';
 
 // Components To create
@@ -25,6 +26,7 @@ function App() {
     <div className="App">
       <Header />
       <CurrentVideo currVideo={currentVideo}/>
+      <Description currVideo={currentVideo}/>
       {/*<VideoList onVideoChange={handleVideoChange} vidList={videoList} doNotShow={currentVideo}/> */}
     </div>
   );
