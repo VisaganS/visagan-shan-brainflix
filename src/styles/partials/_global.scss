@@ -1,0 +1,18 @@
+@use './mixins' as *;
+@use './variables' as *;
+@use './typography' as *;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Avenir, sans-serif;
+    font-weight:400;
+
+    ul{
+        list-style: none;
+    }
+}

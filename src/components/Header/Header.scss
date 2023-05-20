@@ -1,0 +1,52 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header{
+    padding: 1rem;
+    &__logo{
+        height: 1.5625rem;
+        width: 7.5rem;
+    }
+    &__search{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0.5rem 0;
+    }
+    &__search-text{
+        width:15rem;
+        height: 2.5rem;
+        border-radius: .25rem;
+        border: .0625rem solid $mercury;
+        background-image: url('../../assets/images/icons/search.svg');
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    &__profile{
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__upload{
+       position: relative;
+       background-color: $brainflix-blue;
+       color: white;
+       width: 100%;
+       height: 2rem;
+       border-radius: .25rem;
+       border:none;
+       font-weight: 700;
+    }
+    &__upload-icon{
+        position:absolute;
+        left:1rem;
+        top: 0.3rem;
+    }
+}
+
+input[type=text] {
+    padding-left: 2.5rem;
+}
