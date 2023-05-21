@@ -4,7 +4,8 @@ import VideoDetails from './data/video-details.json' // A list of video objects
 import Header from './components/Header/Header.js'
 import CurrentVideo from './components/CurrentVideo/CurrentVideo.js'
 import Description from './components/Description/Description.js'
-import VideoList from './components/VideoList/VideoList';
+import Comments from './components/Comments/Comments.js'
+import VideoList from './components/VideoList/VideoList'
 
 // Components To create
 // Header, CurrentVideo (The one being displayed), Description (details of the video and like button), 
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <CurrentVideo currVideo={currentVideo}/>
       <Description currVideo={currentVideo}/>
+      <Comments currComments={currentVideo.comments}/>
       {/*<VideoList onVideoChange={handleVideoChange} vidList={videoList} doNotShow={currentVideo}/> */}
     </div>
   );

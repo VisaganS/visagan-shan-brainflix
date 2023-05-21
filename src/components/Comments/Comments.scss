@@ -1,0 +1,92 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments{
+    padding: 1rem 1rem;
+
+    &__counter{
+        text-align: left;
+        padding: 1rem 0;
+        font-weight:600;
+    }
+    &__create{
+        display:flex;
+        justify-content: space-between;
+    }
+    &__images {
+        margin: 1.5rem 0;
+
+    }
+    &__profile-pic {
+        width: 2.375rem;
+        height: 2.375rem;
+        border-radius:50%;
+        object-fit: cover;
+    }
+    &__form{
+        width: 80%;
+    }
+    &__display{
+        border-top: 0.0625rem solid $mercury;
+    }
+    
+}
+
+.form-inputs{
+
+    &__item{
+        padding:0.5rem 0;
+    }
+
+    &__label{
+        color: $silver;
+        font-size: 0.8rem;
+        padding-bottom: .25rem;
+        text-align: left;
+    }
+
+    #comment{
+        width:100%;
+        height: 6rem;
+        padding: .75rem;
+        border-radius: .25rem;
+        border: .0625rem solid $mercury;
+        @include tablet {
+            padding: 1rem;
+         }
+    }
+    input[type="text"] {
+        padding: .75rem;
+
+        @include tablet {
+            padding: 1rem;
+         }
+      }
+      ::placeholder{
+        font-family: Avenir;
+        color:black;
+      }
+    &__button{
+        background-color: $brainflix-blue;
+        color:white;
+        height: 2.5rem;
+        width: 100%;
+        border-radius: .25rem;
+        font-weight:600;
+        margin: 0.5rem 0;
+        border:none;
+        position:relative;
+        &:hover{
+            background-color:$brainflix-darkblue;
+        }
+    }
+
+    &__icon{
+        position:absolute;
+        left: 0.5rem;
+        top: 0.7rem;
+        width: 1.25rem;
+    }
+}

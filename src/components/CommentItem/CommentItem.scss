@@ -1,0 +1,67 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
+.item{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: .0625rem solid $mercury;
+    border-top: 0.0625rem solid $mercury;
+    padding:1rem 0;
+   
+    &__text{
+        display:flex;
+        flex-direction:column;
+        width:80%;
+        @include tablet {
+            width: 90%;
+         }
+         @include desktop {
+            width: 87%;
+         }
+    }
+    &__header{
+        display:flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+    &__name{
+        font-weight:600;
+    }
+    &__date{
+        color: $silver;
+    }
+    &__body{
+        font-size:0.8rem;
+        text-align: left;
+
+        @include tablet {
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+         }
+    }
+    &__image-container{
+        width:2.375rem;
+        height:2.375rem;
+        border-radius: 50%;
+        background-color: $mercury;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+    &__image{
+        width:2.375rem;
+        height:2.375rem;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
