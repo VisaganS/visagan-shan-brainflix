@@ -9,9 +9,10 @@ return(
 <img src={logo} alt="brainflix-logo" className="header__logo"/>
 
 <div className="header__search">
-    <div className="header__search-bar">
-    <input type="text" className="header__search-text" name="search" placeholder="Search" /></div>
+    <div className="header__search-bar"><input type="text" className="header__search-text" name="search" placeholder="Search" /></div>
+    <button className="header__upload header__upload--row"><img src={uploadIcon} alt="upload-image" className="header__upload-icon"/> UPLOAD</button>
     <img src={profile} className="header__profile" alt="profile-pic"/>
+
 </div>
 
 <button className="header__upload"><img src={uploadIcon} alt="upload-image" className="header__upload-icon"/> UPLOAD</button>

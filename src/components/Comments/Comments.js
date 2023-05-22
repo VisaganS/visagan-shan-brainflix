@@ -13,15 +13,19 @@ const Comments = ({currComments}) => {
                     <div className="comments__form">
                         <form className="form-inputs">
                             <div className="form-inputs__item">
+                                <div className="form-inputs__input">
                                 <div className="form-inputs__label"> <label htmlFor="comment">JOIN THE CONVERSATION</label></div>
                                 <textarea id="comment" name="comment" placeholder="Add a new comment"></textarea><br/>
-                                <button type="submit" className="form-inputs__button"><img src={commentIcon} className="form-inputs__icon"/>COMMENT</button>
+                                </div>
+                                <div className="form-inputs__button-container">
+                                    <button type="submit" className="form-inputs__button"><img src={commentIcon} className="form-inputs__icon"/>COMMENT</button>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div className="comments__display">
-                    {currComments.map(commentItem => {return <CommentItem commItem={commentItem}/> })}
+                    {currComments.map( (commentItem,index) => {return <CommentItem key={index} commItem={commentItem}/> })}
                 </div>
             </div>
         </div>

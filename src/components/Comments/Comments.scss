@@ -6,9 +6,16 @@
 .comments{
     padding: 1rem 1rem;
 
+    @include tablet{
+        padding: 1rem 2.25rem;
+    }
+    @include desktop{
+        padding: 1rem 0;
+    }
+
     &__counter{
         text-align: left;
-        padding: 1rem 0;
+        padding-bottom: 1rem;
         font-weight:600;
     }
     &__create{
@@ -18,6 +25,9 @@
     &__images {
         margin: 1.5rem 0;
 
+        @include tablet{
+            margin: 1.8rem 0;
+        }
     }
     &__profile-pic {
         width: 2.375rem;
@@ -27,6 +37,10 @@
     }
     &__form{
         width: 80%;
+
+        @include tablet{
+            width: 90%;
+        }
     }
     &__display{
         border-top: 0.0625rem solid $mercury;
@@ -38,6 +52,12 @@
 
     &__item{
         padding:0.5rem 0;
+        
+        @include tablet{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__label{
@@ -54,8 +74,13 @@
         border-radius: .25rem;
         border: .0625rem solid $mercury;
         @include tablet {
-            padding: 1rem;
+            padding: 0.7rem 1rem;
+            width: 25rem;
+            height: 2.5rem;
          }
+    }
+    textarea{
+        resize:none;
     }
     input[type="text"] {
         padding: .75rem;
@@ -68,6 +93,11 @@
         font-family: Avenir;
         color:black;
       }
+    &__button-container{
+        @include tablet{
+            padding-top: 0.8rem;
+        }
+    }  
     &__button{
         background-color: $brainflix-blue;
         color:white;
@@ -80,6 +110,10 @@
         position:relative;
         &:hover{
             background-color:$brainflix-darkblue;
+        }
+
+        @include tablet{
+            width: 12rem;
         }
     }
 

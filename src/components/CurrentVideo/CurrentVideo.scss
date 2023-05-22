@@ -1,5 +1,26 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
 .display{
-    &__image{
-        width:100%;
+    display: flex;
+    justify-content: center;
+    background-color: $brainflix-darkblack;
+    @include tablet{
+        padding: 0 5rem;
     }
+
+    @include desktop{
+        padding: 0;
+    }
+    
+    &__curr-video{
+        width:100%;
+        
+        @include desktop{
+            width: 71vw;
+        }
+    }
+
 }

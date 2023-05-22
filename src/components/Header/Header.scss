@@ -5,16 +5,48 @@
 
 .header{
     padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet{
+        padding: 0.5rem 2.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        padding: 0.5rem 5rem;
+    }
+    
     &__logo{
         height: 1.5625rem;
         width: 7.5rem;
+
+       &--row{
+        display:none;
+        @include tablet{
+            display:inline-block;
+        }
+       }
     }
+
     &__search{
+        width:100%;
         display:flex;
-        align-items: center;
         justify-content: space-between;
-        padding:0.5rem 0;
+        align-items: center;
+        padding:1rem 0;
+
+        @include tablet{
+            width:70%;
+        }
+        @include desktop{
+            width: 50%;
+        }
+
     }
+
     &__search-text{
         width:15rem;
         height: 2.5rem;
@@ -23,27 +55,66 @@
         background-image: url('../../assets/images/icons/search.svg');
         background-repeat: no-repeat;
         background-position: 5% 50%;
+
+        @include tablet{
+            width: 14rem;
+        }
+        @include desktop{
+            width: 12rem;
+        }
+    
     }
     &__profile{
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
         object-fit: cover;
+
+        @include tablet{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
     }
     &__upload{
        position: relative;
        background-color: $brainflix-blue;
        color: white;
        width: 100%;
-       height: 2rem;
+       height: 2.5rem;
        border-radius: .25rem;
        border:none;
        font-weight: 700;
+
+       &:hover{
+        background-color: $brainflix-darkblue;
+       }
+
+       @include tablet{
+        display:none;
+       }
+
+       &--row{
+        display:none;
+        
+        @include tablet{
+            display:block;
+            width: 11rem;
+            height: 2.5rem;
+        }
+
+        @include desktop{
+            width: 9rem;
+        }
+       }
     }
     &__upload-icon{
         position:absolute;
         left:1rem;
-        top: 0.3rem;
+        top: 0.5rem;
+
+        @include tablet{
+            top: 0.5rem;
+        }
     }
 }
 

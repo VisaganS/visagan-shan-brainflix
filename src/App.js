@@ -24,12 +24,18 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <CurrentVideo currVideo={currentVideo}/>
+      <div className="app__content">
+      <div className="app__content-left">
       <Description currVideo={currentVideo}/>
       <Comments currComments={currentVideo.comments}/>
-      {/*<VideoList onVideoChange={handleVideoChange} vidList={videoList} doNotShow={currentVideo}/> */}
+      </div>
+      <div className="app__content-right">
+      <VideoList handleVideoChange={handleVideoChange} videoList={videoList} doNotShow={currentVideo.id}/>
+      </div>
+      </div>
     </div>
   );
 }

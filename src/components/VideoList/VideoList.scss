@@ -1,0 +1,27 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+
+.video-list{
+    padding: 0.5rem 1rem;
+
+    @include tablet{
+        padding: 0.5rem 2.25rem;
+    }
+    @include desktop{
+        padding: 0.5rem 0;
+    }
+    &__heading{
+        color:$silver;
+        font-size:0.8rem;
+        text-align: left;
+    }
+    &__tiles{
+        padding: 1rem 0;
+        @include tablet{
+        width: 40%;
+        }
+      
+    }
+}
