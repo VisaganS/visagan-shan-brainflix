@@ -7,17 +7,11 @@ import Description from './components/Description/Description.js'
 import Comments from './components/Comments/Comments.js'
 import VideoList from './components/VideoList/VideoList'
 
-// Components To create
-// Header, CurrentVideo (The one being displayed), Description (details of the video and like button), 
-// CommentSection, VideoListArea
-
 function App() {
-  // We need to keep state at the highest level (App.js)
-  // We want to pass state and update state in the components
-  const videoList = VideoDetails; //  may not need to be a state var
+ 
+  const videoList = VideoDetails; 
   const [currentVideo, setCurrentVideo] = useState(videoList[0]);
-
-  //This updates the current video
+  
   function handleVideoChange(id) {
     let newVid = videoList.find(data => data.id === id);
     setCurrentVideo(newVid);
