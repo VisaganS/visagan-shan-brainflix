@@ -7,17 +7,13 @@
     display: flex;
     justify-content: center;
     background-color: $brainflix-darkblack;
-    @include tablet{
-        padding: 0 5rem;
-    }
-
-    @include desktop{
-        padding: 0;
-    }
     
     &__curr-video{
         width:100%;
         
+        @include tablet{
+            width: 90vw;
+        }
         @include desktop{
             width: 71vw;
         }

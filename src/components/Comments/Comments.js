@@ -2,6 +2,7 @@ import './Comments.scss';
 import profilePic from '../../assets/images/Mohan-muruge.jpg';
 import commentIcon from '../../assets/images/icons/add_comment.svg'
 import CommentItem from '../CommentItem/CommentItem.js'
+import { useState } from 'react';
 
 const Comments = ({currComments}) => {
     return (
@@ -15,7 +16,7 @@ const Comments = ({currComments}) => {
                             <div className="form-inputs__item">
                                 <div className="form-inputs__input">
                                 <div className="form-inputs__label"> <label htmlFor="comment">JOIN THE CONVERSATION</label></div>
-                                <textarea id="comment" name="comment" placeholder="Add a new comment"></textarea><br/>
+                                <textarea className="comment" name="comment" placeholder="Add a new comment"></textarea><br/>
                                 </div>
                                 <div className="form-inputs__button-container">
                                     <button type="submit" className="form-inputs__button"><img src={commentIcon} className="form-inputs__icon"/>COMMENT</button>
