@@ -35,12 +35,3 @@ function App() {
 }
 
 export default App;
-
-/**
- *          App
- * Video List       Header        Video
- * Video Tile         icon         PlayBtn ProgressBar 
- * 
- * 
- * 
- */
