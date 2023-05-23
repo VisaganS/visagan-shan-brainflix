@@ -27,6 +27,11 @@
             padding-top:2rem;
             font-size:2rem;
         }
+        
+        @include desktop{
+            font-size: 1.6rem;
+            padding-top:1.5rem;
+        }
     }
     &__details{
         padding: 1.25rem 0;
@@ -37,6 +42,12 @@
             justify-content: space-between;
             padding-top: 1.5rem;
             padding-bottom: 0.75rem;
+        }
+
+        @include desktop{
+            font-size: 0.8rem;
+            padding-top: 1rem;
+            padding-right: 1rem;
         }
     }
     &__container{
@@ -69,6 +80,10 @@
     &__icon{
         padding: 0 0.5rem;
         height: 1.1rem;
+
+        @include desktop{
+            height: 1rem;
+        }
     }
 
     &__video{
@@ -80,6 +95,10 @@
         @include tablet{
             font-size: 0.9rem;
             line-height: 1.4rem;
+        }
+        @include desktop{
+            padding-right: 1rem;
+            font-size: 0.74rem;
         }
     }
 }

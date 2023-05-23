@@ -10,7 +10,8 @@
         padding: 0.5rem 2.25rem;
     }
     @include desktop{
-        padding: 0.5rem 0;
+        padding: 0;
+        padding-top: 1.5rem;
     }
     &__heading{
         color:$silver;
@@ -21,6 +22,9 @@
         padding: 1rem 0;
         @include tablet{
         width: 40%;
+        }
+        @include desktop{
+            width:100%;
         }
       
     }

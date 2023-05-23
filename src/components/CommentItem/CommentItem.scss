@@ -25,6 +25,10 @@
         justify-content: space-between;
         padding: 0.5rem 0;
         font-size: 0.9rem;
+
+        @include desktop{
+            font-size: 0.9rem;
+        }
     }
     &__name{
         font-weight:600;
@@ -40,6 +44,11 @@
             font-size: 0.85rem;
             line-height: 1.5rem;
          }
+        
+        @include desktop{
+            padding-right: 0.5rem;
+            font-size: 0.75rem;
+        }
     }
     &__image-container{
         width:2.375rem;
@@ -48,8 +57,8 @@
         background-color: $mercury;
 
         @include tablet {
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
         }
     }
     &__image{

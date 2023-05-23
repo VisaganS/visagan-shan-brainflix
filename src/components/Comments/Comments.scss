@@ -11,12 +11,17 @@
     }
     @include desktop{
         padding: 1rem 0;
+        padding-right: 1rem;
     }
 
     &__counter{
         text-align: left;
         padding-bottom: 1rem;
         font-weight:600;
+
+        @include desktop{
+            font-size: 0.8rem;
+        }
     }
     &__create{
         display:flex;
@@ -27,6 +32,7 @@
 
         @include tablet{
             margin: 1.8rem 0;
+
         }
     }
     &__profile-pic {
@@ -34,6 +40,11 @@
         height: 2.375rem;
         border-radius:50%;
         object-fit: cover;
+
+        @include tablet{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
     }
     &__form{
         width: 80%;
@@ -73,11 +84,16 @@
         padding: .75rem;
         border-radius: .25rem;
         border: .0625rem solid $mercury;
+
         @include tablet {
             padding: 0.7rem 1rem;
             width: 25rem;
             height: 2.5rem;
          }
+
+        @include desktop{
+            width: 21rem;
+        } 
     }
     textarea{
         resize:none;
@@ -114,6 +130,10 @@
 
         @include tablet{
             width: 12rem;
+        }
+        @include desktop{
+            width: 12em;
+            height: 2.5rem;
         }
     }
 
