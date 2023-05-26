@@ -11,7 +11,7 @@ return(
 
 <div className="header__search">
     <div className="header__search-bar"><input type="text" className="header__search-text" name="search" placeholder="Search" /></div>
-    <NavLink to="/upload">
+    <NavLink className="header__upload-link" to="/upload">
         <button className="header__upload header__upload--row">
             <img src={uploadIcon} alt="upload-image" className="header__upload-icon"/> UPLOAD
             </button>
@@ -19,8 +19,9 @@ return(
     <img src={profile} className="header__profile" alt="profile-pic"/>
 
 </div>
-
+<NavLink className="header__upload-link" to="/upload">
 <button className="header__upload"><img src={uploadIcon} alt="upload-image" className="header__upload-icon"/> UPLOAD</button>
+</NavLink>
 </header>
 );
 }
