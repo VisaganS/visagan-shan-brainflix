@@ -1,15 +1,20 @@
 import './App.scss';
-import HomePage from './components/HomePage/HomePage.js';
+import HomePage from './pages/HomePage/HomePage.js';
+import Upload from './pages/Upload/Upload.js';
 import Header from './components/Header/Header.js'
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 
 function App() {
 
   return (
-    <div className="app">
+    <BrowserRouter>
       <Header />
-      <HomePage />
-    </div>
+      <Routes>
+    <Route path="/" element={<HomePage/>} />
+    <Route path="/upload" element={<Upload/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,10 +1,10 @@
 import './HomePage.scss'
 import { useState } from 'react';
 import VideoDetails from '../../data/video-details.json'
-import CurrentVideo from '../CurrentVideo/CurrentVideo.js'
-import Description from '../Description/Description.js'
-import Comments from '../Comments/Comments.js'
-import VideoList from '../VideoList/VideoList.js'
+import CurrentVideo from '../../components/CurrentVideo/CurrentVideo.js'
+import Description from '../../components/Description/Description.js'
+import Comments from '../../components/Comments/Comments.js'
+import VideoList from '../../components/VideoList/VideoList.js'
 
 const HomePage = () => {
 

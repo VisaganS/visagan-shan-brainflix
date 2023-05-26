@@ -56,6 +56,10 @@
         background-repeat: no-repeat;
         background-position: 5% 50%;
 
+        &[type=text] {
+            padding-left: 2.5rem;
+        }
+
         @include tablet{
             width: 14rem;
         }
@@ -116,8 +120,4 @@
             top: 0.5rem;
         }
     }
-}
-
-input[type=text] {
-    padding-left: 2.5rem;
 }

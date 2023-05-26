@@ -129,7 +129,7 @@
         border:none;
         position:relative;
         &:hover{
-            background-color:$brainflix-darkblue;
+            background-color:$brainflix-darkblue; //this not working, gotta fix
         }
 
         @include tablet{
