@@ -7,10 +7,8 @@
     display: flex;
     justify-content: center;
     background-color: $brainflix-darkblack;
-    
     &__curr-video{
         width:100%;
-        
         @include tablet{
             width: 90vw;
         }
@@ -18,5 +16,4 @@
             width: 71vw;
         }
     }
-
 }

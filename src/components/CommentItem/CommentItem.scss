@@ -1,75 +1,71 @@
-@use '../../styles/partials/global' as *;
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/typography' as *;
-@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 
-.item{
-    display:flex;
+.item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid $mercury;
+  padding: 1rem 0;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    @include tablet {
+      width: 90%;
+    }
+    @include desktop {
+      width: 87%;
+    }
+  }
+  &__header {
+    display: flex;
     justify-content: space-between;
-    border-bottom: .0625rem solid $mercury;
-    padding:1rem 0;
-   
-    &__text{
-        display:flex;
-        flex-direction:column;
-        width:80%;
-        @include tablet {
-            width: 90%;
-         }
-         @include desktop {
-            width: 87%;
-         }
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    @include desktop {
+      font-size: 0.9rem;
     }
-    &__header{
-        display:flex;
-        justify-content: space-between;
-        padding: 0.5rem 0;
-        font-size: 0.9rem;
+  }
+  &__name {
+    font-weight: 600;
+  }
+  &__date {
+    color: $silver;
+  }
+  &__body {
+    font-size: 0.8rem;
+    text-align: left;
+    @include tablet {
+      font-size: 0.85rem;
+      line-height: 1.5rem;
+    }
+    @include desktop {
+      padding-right: 0.5rem;
+      font-size: 0.75rem;
+    }
+  }
+  &__image-container {
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background-color: $mercury;
 
-        @include desktop{
-            font-size: 0.9rem;
-        }
+    @include tablet {
+      width: 2.5rem;
+      height: 2.5rem;
     }
-    &__name{
-        font-weight:600;
-    }
-    &__date{
-        color: $silver;
-    }
-    &__body{
-        font-size:0.8rem;
-        text-align: left;
+  }
+  &__image {
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    object-fit: cover;
 
-        @include tablet {
-            font-size: 0.85rem;
-            line-height: 1.5rem;
-         }
-        
-        @include desktop{
-            padding-right: 0.5rem;
-            font-size: 0.75rem;
-        }
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
     }
-    &__image-container{
-        width:2.375rem;
-        height:2.375rem;
-        border-radius: 50%;
-        background-color: $mercury;
-
-        @include tablet {
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-    }
-    &__image{
-        width:2.375rem;
-        height:2.375rem;
-        border-radius: 50%;
-        object-fit: cover;
-
-        @include tablet {
-            width: 3rem;
-            height: 3rem;
-        }
-    }
+  }
 }

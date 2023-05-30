@@ -10,6 +10,9 @@
         border-top: .0625rem solid $mercury;
         padding: 0 2.25rem;
     }
+    @include desktop{
+        padding: 0 5rem;
+    }
 
     &__title{
     padding-top:1.5rem;
@@ -26,7 +29,6 @@
     &__content{
         @include desktop{
             display: flex;
-            padding: 0 4rem;
             justify-content: space-between;
         }
     }
@@ -38,7 +40,21 @@
     }
     &__form{
         @include desktop{
-            width:65%;
+            width:100%;
+        }
+    }
+    &__form-content{
+        @include desktop{
+            display:flex;
+        }
+    }
+    &__form-inputs{
+        @include desktop{
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding-left: 1rem;
         }
     }
     &__label{
@@ -62,7 +78,7 @@
     }
     &__input-desc{
         width:100%;
-        height: 5rem;
+        height: 5.5rem;
         margin: 0.25rem 0;
         padding: 0.5rem;
         border: .0625rem solid $mercury;
