@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Comments = ({currComments}) => {
     return (
         <div className="comments">
-            <div className="comments__counter">{currComments.length} Comments</div>
+            <div className="comments__counter">{currComments?.length} Comments</div>
             <div className="comments__page">
                 <div className="comments__create">
                     <div className="comments__images"><img src={profilePic} className="comments__profile-pic" alt="profile-pic" /></div>
@@ -26,7 +26,7 @@ const Comments = ({currComments}) => {
                     </div>
                 </div>
                 <div className="comments__display">
-                    {currComments.map( (commentItem,index) => {return <CommentItem key={index} commItem={commentItem}/> })}
+                    {currComments?.map( (commentItem,index) => {return <CommentItem key={index} commItem={commentItem}/> })}
                 </div>
             </div>
         </div>

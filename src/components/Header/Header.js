@@ -19,9 +19,9 @@ return(
     <img src={profile} className="header__profile" alt="profile-pic"/>
 
 </div>
-<NavLink className="header__upload-link" to="/upload">
-<button className="header__upload"><img src={uploadIcon} alt="upload-image" className="header__upload-icon"/> UPLOAD</button>
-</NavLink>
+
+<button className="header__upload"><NavLink className="header__upload-link" to="/upload"><img src={uploadIcon} alt="upload-image" className="header__upload-icon"/> UPLOAD</NavLink></button>
+
 </header>
 );
 }

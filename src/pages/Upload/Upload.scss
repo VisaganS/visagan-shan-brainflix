@@ -6,6 +6,11 @@
 .upload{
     padding: 0 1rem;
 
+    @include tablet{
+        border-top: .0625rem solid $mercury;
+        padding: 0 2.25rem;
+    }
+
     &__title{
     padding-top:1.5rem;
     padding-bottom: 0.5rem;
@@ -14,6 +19,7 @@
 
     @include tablet{
         border-bottom: .0625rem solid $mercury;
+        border-top: none;
         padding: 1.5rem 0;
     }
     }
