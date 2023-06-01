@@ -1,7 +1,7 @@
 import "./CommentItem.scss";
 
 const CommentItem = ({ commItem }) => {
-  const { id, name, comment, likes, timestamp } = commItem;
+  const { name, comment, timestamp } = commItem;
 
   const formattedDate = new Date(timestamp).toLocaleDateString("en-US", {
     month: "2-digit",

@@ -20,8 +20,8 @@ return(
             <div className="description__info"><p className="description__info-text">{formattedDate}</p></div>
             </div>
             <div className="description__container">
-            <div className="description__info"><img src={viewIcon} className="description__icon"/><p className="description__info-text">{views}</p></div>
-            <div className="description__info"><img src={likesIcon} className="description__icon"/><p className="description__info-text">{likes}</p></div>
+            <div className="description__info"><img src={viewIcon} className="description__icon" alt="view-icon"/><p className="description__info-text">{views}</p></div>
+            <div className="description__info"><img src={likesIcon} className="description__icon" alt="likes-icon"/><p className="description__info-text">{likes}</p></div>
             </div>
         </div>
         <div className="description__video">

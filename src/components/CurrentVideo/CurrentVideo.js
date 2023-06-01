@@ -1,5 +1,4 @@
 import './CurrentVideo.scss';
-import playIcon from '../../assets/images/icons/play.svg'
 
 const CurrentVideo = ({currVideo}) => {
     return (
