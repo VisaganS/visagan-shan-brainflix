@@ -11,14 +11,14 @@ const CommentItem = ({ commItem }) => {
 
   return (
     <div className="item">
-      <div className="item__image-container"></div>
-      <div className="item__text">
-        <div className="item__header">
-          <div className="item__name">{name}</div>
-          <div className="item__date">{formattedDate}</div>
+        <div className="item__image-container"></div>
+        <div className="item__text">
+            <div className="item__header">
+                <div className="item__name">{name}</div>
+                <div className="item__date">{formattedDate}</div>
+            </div>
+            <div className="item__body">{comment}</div>
         </div>
-        <div className="item__body">{comment}</div>
-      </div>
     </div>
   );
 };

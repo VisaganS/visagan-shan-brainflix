@@ -10,20 +10,22 @@ import './HomePage.scss';
 
 const HomePage = () => {
     const {id} = useParams();
-    const apiUrl = "https://project-2-api.herokuapp.com";
+    // const apiUrl = "https://project-2-api.herokuapp.com";
+    const apiUrl = "http://localhost:8080";
     const apiKey = process.env.REACT_APP_API_KEY;
-    
-    //set an initial value for this use state
+ 
   const [currentVideo, setCurrentVideo] = useState({});
   const [videoList, setVideoList] = useState([]);
 
 useEffect(()=>{
   axios
-  .get(`${apiUrl}/videos?api_key=${apiKey}`)
+  // .get(`${apiUrl}/videos?api_key=${apiKey}`)
+  .get(`${apiUrl}/videos`)
   .then(response => {
     setVideoList(response.data);
     const initVidId = response.data[0].id;
-    return axios.get(`${apiUrl}/videos/${id||initVidId}?api_key=${apiKey}`) 
+    // return axios.get(`${apiUrl}/videos/${id||initVidId}?api_key=${apiKey}`)
+    return axios.get(`${apiUrl}/videos/${id||initVidId}`)
   })
   .then(response =>{
     const initVid  = response.data;
