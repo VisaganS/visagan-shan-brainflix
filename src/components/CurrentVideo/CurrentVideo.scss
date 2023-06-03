@@ -8,6 +8,8 @@
     background-color: $brainflix-darkblack;
     &__curr-video{
         width:100%;
+        aspect-ratio:16/9;
+        object-fit: cover;
         @include tablet{
             width: 90vw;
         }

@@ -10,7 +10,6 @@ import './HomePage.scss';
 
 const HomePage = () => {
     const {id} = useParams();
-    // const apiUrl = "https://project-2-api.herokuapp.com";
     const apiUrl = "http://localhost:8080";
     const apiKey = process.env.REACT_APP_API_KEY;
  
@@ -19,12 +18,10 @@ const HomePage = () => {
 
 useEffect(()=>{
   axios
-  // .get(`${apiUrl}/videos?api_key=${apiKey}`)
   .get(`${apiUrl}/videos`)
   .then(response => {
     setVideoList(response.data);
     const initVidId = response.data[0].id;
-    // return axios.get(`${apiUrl}/videos/${id||initVidId}?api_key=${apiKey}`)
     return axios.get(`${apiUrl}/videos/${id||initVidId}`)
   })
   .then(response =>{
