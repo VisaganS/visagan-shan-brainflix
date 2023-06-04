@@ -2,6 +2,10 @@
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/mixins' as *;
 
+a{
+    text-decoration: none;
+    color: black;
+}
 .video-tile {
     display:flex;
     padding: 0.5rem 0;
@@ -19,10 +23,6 @@
         width: 6.5rem;
         object-fit: cover;
         border-radius: .25rem;
-        @include desktop{
-            width: 6rem;
-            height: 3.5rem;
-        }
     }
     &__text{
         display:flex;
