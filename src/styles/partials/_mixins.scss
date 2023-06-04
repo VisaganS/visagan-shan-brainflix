@@ -17,4 +17,9 @@
       @content;
     }
   }
-  
+
+  @mixin desktop-extend {
+    @media screen and (min-width: $desktop_extend-breakpoint) {
+      @content;
+    }
+  }

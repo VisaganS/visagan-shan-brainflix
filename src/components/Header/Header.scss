@@ -40,6 +40,9 @@
         @include desktop{
             width: 50%;
         }
+        @include desktop-extend{
+            width:45%;
+        }
     }
 
     &__search-text{

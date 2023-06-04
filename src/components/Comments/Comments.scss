@@ -44,6 +44,9 @@
         @include tablet{
             width: 90%;
         }
+        @include desktop{
+            width: 87%;
+        }
     }
     &__display{
         border-top: 0.0625rem solid $mercury;
@@ -81,7 +84,10 @@
             height: 2.5rem;
          }
         @include desktop{
-            width: 21rem;
+            width: 20rem;
+        }
+        @include desktop-extend{
+            width: 30rem;
         } 
     }
     textarea{
