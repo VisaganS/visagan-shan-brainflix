@@ -1,22 +1,49 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
 import uploadPreview from '../../assets/images/Upload-video-preview.jpg'
 import publishIcon from '../../assets/images/icons/publish.svg'
 import './Upload.scss';
+import axios from 'axios';
 
 const Upload = () => {
 
-const [formValues, setFormValues] = useState({});
-
 const handleSubmit = (event) => {
     event.preventDefault();
-    setFormValues({title: event.target.title.value, desc: event.target.desc.value});
-    console.log(formValues);
-}
-
-useEffect(()=>{
+    let data = {
+        title: event.target.title.value,
+        channel: "The Brainy Boys",
+        image: "",
+        description: event.target.desc.value,
+        views: "3,092,284",
+        likes: "75,985",
+        duration: "4:20",
+        video: "https://project-2-api.herokuapp.com/stream",
+        timestamp: 1632344461000,
+        comments: [
+          {
+            id: "2d818087-c1f4-4ec2-bcdc-b545fd6ec298",
+            name: "Will Smith",
+            comment: "Amazing man, just great. Just keep my wife's name out your mouth.",
+            likes: 1,
+            timestamp: 1632512763000
+          },
+          {
+            id: "191de346-b3c2-47b4-bf5b-6db90d1e3bqz",
+            name: "Thanos",
+            comment: "Video was so good that I accidently snapped my fingers.",
+            likes: 0,
+            timestamp: 1632496261000
+          }
+        ] 
+    }
     
-},[])
+    axios.
+    post('http://localhost:8080/videos', data)
+    .then(response => {
+        console.log(response.data);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
 
     return(
         <div className= "upload">
