@@ -1,16 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import uploadPreview from '../../assets/images/Upload-video-preview.jpg'
 import publishIcon from '../../assets/images/icons/publish.svg'
 import './Upload.scss';
 import axios from 'axios';
 
 const Upload = () => {
+const navigate = useNavigate();
 
 const handleSubmit = (event) => {
     event.preventDefault();
     let data = {
         title: event.target.title.value,
         channel: "The Brainy Boys",
-        image: "",
         description: event.target.desc.value,
         views: "3,092,284",
         likes: "75,985",
@@ -34,14 +35,16 @@ const handleSubmit = (event) => {
           }
         ] 
     }
-    
+
     axios.
     post('http://localhost:8080/videos', data)
     .then(response => {
         console.log(response.data);
+        navigate('/');
     })
     .catch(err => {
         console.log(err);
+        navigate('/');
     })
 }
 
