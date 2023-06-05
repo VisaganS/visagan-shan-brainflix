@@ -34,7 +34,7 @@ useEffect(()=>{
 },[])
 
 useEffect(() => {
-  axios.get(`${apiUrl}/videos/${id}?api_key=${apiKey}`)
+  axios.get(`${apiUrl}/videos/${id}`)
   .then(response => {
     setCurrentVideo(response.data);
   }).catch(err => {
