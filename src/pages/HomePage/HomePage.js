@@ -10,7 +10,7 @@ import './HomePage.scss';
 
 const HomePage = () => {
     const {id} = useParams();
-    const apiUrl = "http://localhost:8080";
+    const apiUrl = "https://brainflix-server-b7jf.onrender.com";
     const apiKey = process.env.REACT_APP_API_KEY;
  
   const [currentVideo, setCurrentVideo] = useState({});
